@@ -1,0 +1,54 @@
+#######################################################################################
+# Book settings
+title : Computação Gráfica 2021-2022
+author: Margarida Madeira e Moura
+copyright: "2022"
+logo: 'images/logo.png'
+
+#######################################################################################
+# Execution settings
+execute:
+  execute_notebooks           : off
+
+#######################################################################################
+# HTML-specific settings
+html:
+  use_repository_button       : false
+  home_page_in_navbar         : false
+  baseurl                     : https://margaridamadeira.github.io/CGr-2021-22/
+
+#######################################################################################
+
+# Information about where the book exists on the web
+repository:
+  url                         : https://github.com/margaridamadeira/CGr-2021-22
+  path_to_book                : docs  # Optional path to your book, relative to the repository root
+  branch                    : main  # Which branch of the repository should be used when creating links
+
+
+# #######################################################################################
+# Interact link settings
+notebook_interface            : "notebook"
+
+latex:
+  latex_engine                : "xelatex"
+  latex_documents:
+    targetname: book.tex
+
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+
+
+# #######################################################################################
+bibtex_bibfiles:
+   - referencias.bib

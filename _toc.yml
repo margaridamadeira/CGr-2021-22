@@ -1,0 +1,12 @@
+format: jb-book
+root: CGr-2021-22
+parts:
+- caption: "In\xEDcio"
+  chapters:
+  - file: "docs/start/Apresenta\xE7\xE3o"
+- caption: S1
+  chapters:
+  - file: docs/S1/Introd
+    sections:
+    - file: docs/S1/partes/UC
+    - file: docs/S1/partes/CGr_part1

@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquadramento &#8212; Computação Gráfica 2020-2021</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/CGr-2020-21/docs/S1/partes/CGr_part2.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computação Gráfica 2020-2021</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Início
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../start/Apresenta%C3%A7%C3%A3o.html">
+   Apresentação geral
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  S1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Introd.html">
+   Introdução
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="UC.html">
+     Avaliação na UC CGr 2021-22
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CGr_part1.html">
+     Introdução
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/docs/S1/partes/CGr_part2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#areas-de-computacao-grafica">
+   Áreas de Computação Gráfica
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelacao-modelling">
+     Modelação (
+     <em>
+      modelling
+     </em>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representacao-rendering">
+     Representação (
+     <em>
+      rendering
+     </em>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Modelação (
+     <em>
+      modelling
+     </em>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-processo">
+   O processo
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Enquadramento</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#areas-de-computacao-grafica">
+   Áreas de Computação Gráfica
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelacao-modelling">
+     Modelação (
+     <em>
+      modelling
+     </em>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representacao-rendering">
+     Representação (
+     <em>
+      rendering
+     </em>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Modelação (
+     <em>
+      modelling
+     </em>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-processo">
+   O processo
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <!-- .slide: style="text-align: left;" -->
+<div class="tex2jax_ignore mathjax_ignore section" id="enquadramento">
+<h1>Enquadramento<a class="headerlink" href="#enquadramento" title="Permalink to this headline">¶</a></h1>
+<aside class="notes">
+Uma perspectiva geral sobre a criação de gráficos 3D
+</aside>
+<hr class="docutils" />
+<div class="section" id="areas-de-computacao-grafica">
+<h2>Áreas de Computação Gráfica<a class="headerlink" href="#areas-de-computacao-grafica" title="Permalink to this headline">¶</a></h2>
+<!-- 
+```{figure} /images/topicos.png
+---
+height: 100px
+name: Tópicos
+---
+Grandes áreas de CGr.
+``` -->
+<ul class="simple">
+<li><p>Modelação (<em>modelling</em>)</p></li>
+<li><p>Representação (<em>rendering</em>)</p></li>
+<li><p>Animação (<em>animation</em>)</p></li>
+</ul>
+<hr class="docutils" />
+<!-- .slide: style="text-align: left;" -->
+<div class="section" id="modelacao-modelling">
+<h3>Modelação (<em>modelling</em>)<a class="headerlink" href="#modelacao-modelling" title="Permalink to this headline">¶</a></h3>
+<p>Processamento de Vértices</p>
+<ul class="simple">
+<li><p>Converte representações dos objectos de um sistema de coordenadas para outro
+Mundo &gt;&gt; Camâra &gt;&gt; Dispositivo</p></li>
+</ul>
+<hr class="docutils" />
+<!-- .slide: style="text-align: left;" -->
+</div>
+<div class="section" id="representacao-rendering">
+<h3>Representação (<em>rendering</em>)<a class="headerlink" href="#representacao-rendering" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://area.autodesk.com/fakeorfoto/">Teste as sua sensibilidade</a></p>
+<hr class="docutils" />
+<!-- .slide: style="text-align: left;" -->
+</div>
+<div class="section" id="id1">
+<h3>Modelação (<em>modelling</em>)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Animação (<em>animation</em>)</p></li>
+</ul>
+<hr class="docutils" />
+<!-- .slide: style="text-align: left;" -->
+</div>
+</div>
+<div class="section" id="o-processo">
+<h2>O processo<a class="headerlink" href="#o-processo" title="Permalink to this headline">¶</a></h2>
+<p>Gera (ou mostra) uma imagem 2D de uma cena 3D</p>
+<p>A cena 3D contém:</p>
+<ul class="simple">
+<li><p>uma câmera virtual: posição e orientação</p></li>
+<li><p>fonte(s) de luz - localização, tipo, cor</p></li>
+<li><p>objetos 3D: cada um tem posição, orientação e escala</p>
+<ul>
+<li><p>textura ou material de cada objeto</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p>Processamento de Vértices
+Converte representações dos objectos
+de um sistema de coordenadas para outro
+Mundo &gt;&gt; Camâra &gt;&gt; Dispositivo</p>
+<p>Determina cores dos vértices</p>
+<p>20</p>
+<p>Projecção
+Combina informação da câmara com a dos objectos
+para produzir imagem 2D
+Projecção perspectiva: raios de projecção convergentes
+Projecção ortogonal: raios de projecção paralelos</p>
+<p>21</p>
+<p>Assemblagem de Primitivas
+Vértices são associados às suas primitivas
+antes de se realizar o recorte
+Segmentos de recta, polígonos, curvas e superfícies</p>
+<p>22</p>
+<p>Recorte</p>
+<p>Objectos fora do volume de visualização
+são recortados da cena
+23</p>
+<p>Discretização
+Se objecto fica na cena, devem ser associadas cores
+aos pixéis correspondentes no frame buffer
+Discretizador produz conjunto de fragmentos
+para cada objecto</p>
+<p>24</p>
+<p>Discretização
+Fragmentos são “pixéis potenciais” com
+atributos cor e profundidade
+Atributos dos vértices interpolados
+para determinar atributos dos fragmentos
+(localização, cor e profundidade)</p>
+<p>25</p>
+<p>Processamento de Fragmentos
+Atributos dos fragmentos usados para determinar a
+cor do pixel correspondente no frame buffer
+Fragmentos podem ocultar outros
+mais distantes da câmara</p>
+<p>26</p>
+<p>API Gráfica</p>
+<p>27</p>
+<p>API Gráfica
+Componente chave de um sistema gráfico</p>
+<p>Colecção de funções para realizar operações básicas
+Desenhar Imagens Sintéticas
+Representar Objectos 3D
+Animar Cenas
+…
+28</p>
+<p>Como criar imagens sintéticas?</p>
+<p>Através da API especificam-se
+Objectos, Materiais, Câmaras e Fontes de Luz</p>
+<p>29</p>
+<p>Especificar Objectos
+APIs suportam
+conjunto limitado de primitivas
+Objectos definidos
+pela sua localização no espaço ou
+pelos seus vértices
+30</p>
+<p>Especificar um Triângulo
+(à antiga)
+Tipo de objecto
+Localização dos vértices
+glBegin(GL_POLYGON)
+glVertex3f(0.0, 0.0, 0.0);
+glVertex3f(0.0, 1.0, 0.0);
+glVertex3f(0.0, 0.0, 1.0);
+glEnd( );</p>
+<p>31</p>
+<p>Especificar um Triângulo
+(usando GPU)
+1.</p>
+<p>Colocar informação geométrica num array
+vec3 points[3];
+points[0] = vec3(0.0, 0.0, 0.0);
+points[1] = vec3(0.0, 1.0, 0.0);
+points[2] = vec3(0.0, 0.0, 1.0);</p>
+<ol class="simple">
+<li></li>
+</ol>
+<p>Enviar array para o GPU</p>
+<ol class="simple">
+<li></li>
+</ol>
+<p>Ordenar ao GPU para renderizar um triângulo</p>
+<p>32</p>
+<p>Especificar Câmaras
+Posição do centro de projecção
+Orientação da câmara
+Campo de visualização
+Dimensão da janela</p>
+<p>33</p>
+<p>Especificar Fontes de Luz</p>
+<p>34</p>
+<p>Especificar Materiais
+Reflexão Ambiente Difusa e Especular</p>
+<p>35</p>
+<p>Pipeline Gráfico
+Primitivas
+Câmara
+Fontes de Luz</p>
+<p>Frame</p>
+<p>36</p>
+<p>Frame
+Animação:
+representação sequencial de imagens estáticas
+(tal como no cinematógrafo de Lumiére em 1890)</p>
+<p>37</p>
+<p>Animação</p>
+<p>38</p>
+<p>Animação em CG
+Gerar sequência de frames
+Desempenho dado por fps
+Quanto mais, melhor… min. 25fps</p>
+<p>39</p>
+<p>Computação Gráfica Interactiva
+Mais que gerar frames em tempo real…
+dar ao utilizador o controlo
+Resultado produzido depende do input do utilizador</p>
+<p>?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/S1/partes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Margarida Madeira e Moura<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
