@@ -3,7 +3,7 @@
 
 O código de honra, tal como enunciado pelo Professor Doutor Pedro Guerreiro, baseia-se no [HonorCode da Universidade de Stanford](https://communitystandards.stanford.edu/student-conduct-process/honor-code-and-fundamental-standard#honor-code). 
 
-É o compromisso assumido individualmente e colectivamente, de livre vontade, pelos alunos desta unidade curricular de que: 
+É o compromisso assumido individualmente e coletivamente, de livre vontade, pelos alunos desta unidade curricular de que: 
 
 - Não darão nem receberão ajuda não autorizada na realização dos trabalhos usados para avaliação. 
 - Se empenharão para que eles próprios e os seus colegas se comportem de acordo com o espírito do código de honra e o respeitem. 

@@ -4,14 +4,14 @@ transition: "slide"
 highlightTheme: "monokai"
 logoImg: "images/logo.png"
 slideNumber: true
-title: "CGr-2020-21 T1"
+title: "CGr-2021-22 T1"
 ---
 
 <!-- .slide: style="text-align: left;" -->
 # Introdução
 
 <aside class="notes">
-Uma perspectiva geral (e histórica) sobre computação gráfica e a nossa abordagem.
+Uma perspetiva geral (e histórica) sobre computação gráfica e a nossa abordagem.
 </aside>
 
 ---
