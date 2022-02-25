@@ -33,7 +33,11 @@ notebook_interface            : "notebook"
 latex:
   latex_engine                : "xelatex"
   latex_documents:
-    targetname: book.tex
+    targetname: CGr.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - referencias.bib
 
 parse:
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
@@ -49,6 +53,11 @@ parse:
     - substitution
 
 
+
 # #######################################################################################
-bibtex_bibfiles:
-   - referencias.bib
+# sphinx 
+sphinx:
+  config:
+    language: pt
+    bibtex_reference_style: label
+    

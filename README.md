@@ -5,5 +5,16 @@ Este é o repositório de suporte à produção de materiais de apoio (lições 
 Estes materiais foram produzidos por [Margarida Madeira e Moura](https://antigo.ualg.pt/pt/users/mmadeira).
 
 
-> Estes materiais foram construídos usando [Jupyter Book 2.0](https://beta.jupyterbook.org/intro.html), um conjunto de ferramentas baseadas em Sphinx e que fazem parte do [ExecutableBookProject](https://ebp.jupyterbook.org/en/latest/).
+> Estes materiais foram construídos usando [Jupyter Book](https://jupyterbook.org).
 
+## Conteúdos
+
+```{tableofcontents}
+```
+
+## Referências
+
+
+```{bibliography} referencias.bib
+:style: plain
+```
