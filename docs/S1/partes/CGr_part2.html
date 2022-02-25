@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="pt">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +43,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -52,10 +53,10 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://margaridamadeira.github.io/CGr-2021-22/docs/S1/partes/CGr_part2.html" />
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="pt">
     
 
     <!-- Google Analytics -->
@@ -87,7 +88,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p aria-level="2" class="caption" role="heading">
@@ -155,8 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -164,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -172,10 +173,10 @@ const thebe_selector_output = ".output, .cell_output"
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../../../_sources/docs/S1/partes/CGr_part2.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -185,8 +186,8 @@ const thebe_selector_output = ".output, .cell_output"
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -197,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Conteúdo
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -256,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Contents </h2>
+                            <h2> Conteúdo </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -310,13 +311,13 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <!-- .slide: style="text-align: left;" -->
 <div class="tex2jax_ignore mathjax_ignore section" id="enquadramento">
-<h1>Enquadramento<a class="headerlink" href="#enquadramento" title="Permalink to this headline">¶</a></h1>
+<h1>Enquadramento<a class="headerlink" href="#enquadramento" title="Link permanente para este título">¶</a></h1>
 <aside class="notes">
 Uma perspetiva geral sobre a criação de gráficos 3D
 </aside>
 <hr class="docutils" />
 <div class="section" id="areas-de-computacao-grafica">
-<h2>Áreas de Computação Gráfica<a class="headerlink" href="#areas-de-computacao-grafica" title="Permalink to this headline">¶</a></h2>
+<h2>Áreas de Computação Gráfica<a class="headerlink" href="#areas-de-computacao-grafica" title="Link permanente para este título">¶</a></h2>
 <!-- 
 ```{figure} /images/topicos.png
 ---
@@ -333,7 +334,7 @@ Grandes áreas de CGr.
 <hr class="docutils" />
 <!-- .slide: style="text-align: left;" -->
 <div class="section" id="modelacao-modelling">
-<h3>Modelação (<em>modelling</em>)<a class="headerlink" href="#modelacao-modelling" title="Permalink to this headline">¶</a></h3>
+<h3>Modelação (<em>modelling</em>)<a class="headerlink" href="#modelacao-modelling" title="Link permanente para este título">¶</a></h3>
 <p>Processamento de Vértices</p>
 <ul class="simple">
 <li><p>Converte representações dos objectos de um sistema de coordenadas para outro
@@ -343,13 +344,13 @@ Mundo &gt;&gt; Camâra &gt;&gt; Dispositivo</p></li>
 <!-- .slide: style="text-align: left;" -->
 </div>
 <div class="section" id="representacao-rendering">
-<h3>Representação (<em>rendering</em>)<a class="headerlink" href="#representacao-rendering" title="Permalink to this headline">¶</a></h3>
+<h3>Representação (<em>rendering</em>)<a class="headerlink" href="#representacao-rendering" title="Link permanente para este título">¶</a></h3>
 <p><a class="reference external" href="https://area.autodesk.com/fakeorfoto/">Teste as sua sensibilidade</a></p>
 <hr class="docutils" />
 <!-- .slide: style="text-align: left;" -->
 </div>
 <div class="section" id="id1">
-<h3>Modelação (<em>modelling</em>)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Modelação (<em>modelling</em>)<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
 <ul class="simple">
 <li><p>Animação (<em>animation</em>)</p></li>
 </ul>
@@ -358,7 +359,7 @@ Mundo &gt;&gt; Camâra &gt;&gt; Dispositivo</p></li>
 </div>
 </div>
 <div class="section" id="o-processo">
-<h2>O processo<a class="headerlink" href="#o-processo" title="Permalink to this headline">¶</a></h2>
+<h2>O processo<a class="headerlink" href="#o-processo" title="Link permanente para este título">¶</a></h2>
 <p>Gera (ou mostra) uma imagem 2D de uma cena 3D</p>
 <p>A cena 3D contém:</p>
 <ul class="simple">
@@ -406,9 +407,9 @@ Mundo &gt;&gt; Camâra &gt;&gt; Dispositivo</p></li>
     <footer class="footer">
   <p>
     
-      By Margarida Madeira e Moura<br/>
+      De Margarida Madeira e Moura<br/>
     
-        &copy; Copyright 2022.<br/>
+        &copy; direito autoral 2022.<br/>
   </p>
 </footer>
 </main>
