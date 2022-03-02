@@ -7,14 +7,3 @@ Estes materiais foram produzidos por [Margarida Madeira e Moura](https://antigo.
 
 > Estes materiais foram construídos usando [Jupyter Book](https://jupyterbook.org).
 
-## Conteúdos
-
-```{tableofcontents}
-```
-
-## Referências
-
-
-```{bibliography} referencias.bib
-:style: plain
-```
