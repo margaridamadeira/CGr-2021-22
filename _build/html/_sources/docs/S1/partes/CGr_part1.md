@@ -8,6 +8,7 @@ title: "CGr-2021-22 T1"
 ---
 
 <!-- .slide: style="text-align: left;" -->
+(T1)=
 # Introdução
 
 <aside class="notes">

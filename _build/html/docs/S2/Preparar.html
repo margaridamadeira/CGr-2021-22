@@ -112,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../S1/Introd.html">
-   Introdução
+   Apresentação da UC
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -125,12 +125,12 @@ const thebe_selector_output = ".output, .cell_output"
      Avaliação na UC CGr 2021-22
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../S1/partes/CGr_part1.html">
-     Introdução
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/partes/CGr_part1.html">
+   Introdução
+  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -221,8 +221,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instrucoes">
-   Instruções
+  <a class="reference internal nav-link" href="#instalacao">
+   Instalação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verificacao-da-instalacao">
+   Verificação da instalação
   </a>
  </li>
 </ul>
@@ -251,8 +256,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instrucoes">
-   Instruções
+  <a class="reference internal nav-link" href="#instalacao">
+   Instalação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verificacao-da-instalacao">
+   Verificação da instalação
   </a>
  </li>
 </ul>
@@ -268,19 +278,57 @@ const thebe_selector_output = ".output, .cell_output"
 <span id="prepp"></span><h1>Preparar o ambiente de trabalho<a class="headerlink" href="#preparar-o-ambiente-de-trabalho" title="Link permanente para este título">¶</a></h1>
 <p>O ambiente de trabalho deve permitir o desenvolvimento de programas usando OpenGL em mode <code class="docutils literal notranslate"><span class="pre">core</span></code>. O sistema operativo e linguagem de programação é uma escolha do aluno.</p>
 <p>O ambiente de trabalho de referência é Windows 10, usando Python (&gt; 3.8).</p>
-<p>Uma máquina do Pólo de Visualização Científica da UAlg está disponível para uso partilhado e será a máquina de referência para execução dos trabalhos finais.</p>
+<p>Uma máquina do Pólo de Visualização Científica da UAlg está disponível para uso partilhado (um utilizador de cada vez) e será a máquina de referência para execução dos trabalhos finais.</p>
+<p>Essa máquina (10.38.5.146) pode ser usada pelos alunos inscritos em Computação Gráfica qundo há aulas práticas (manhãs de terça-feira e quinta-feira) e todos os dias a partir das 18h.</p>
+<p>A ligação à máquina é feita na rede Ualg com</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Remote</span> <span class="pre">Desktop</span> <span class="pre">Connection</span></code> em Windows</p></li>
+<li><p><a class="reference external" href="https://apps.apple.com/vg/app/microsoft-remote-desktop/id1295203466?mt=12">Microsoft Remote Desktop</a> para Mac</p></li>
+<li><p>e aplicação semelhante em Linux; Remmina em Debian 11.2 (bullseye)
+usando as suas credenciais.</p></li>
+</ul>
 <div class="section" id="pre-requisitos">
 <h2>Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Link permanente para este título">¶</a></h2>
 <p>Antes de iniciar, verifique que tem os <em>drivers</em> da carta gráfica atualizados.
 Precisará do <a class="reference external" href="https://www.python.org/downloads/">Python</a>. Descarregue e instale.</p>
 </div>
-<div class="section" id="instrucoes">
-<h2>Instruções<a class="headerlink" href="#instrucoes" title="Link permanente para este título">¶</a></h2>
-<ol class="simple">
-<li><p>Crie uma pasta para CGr</p></li>
-<li><p>Nessa pasta, abra o terminal de comando (<code class="docutils literal notranslate"><span class="pre">cmd</span></code>)</p></li>
-<li><p>Crie um ambiente virtual</p></li>
-</ol>
+<div class="section" id="instalacao">
+<h2>Instalação<a class="headerlink" href="#instalacao" title="Link permanente para este título">¶</a></h2>
+<p>Crie uma pasta para CGr</p>
+<p>Nessa pasta, abra o terminal de comando (<code class="docutils literal notranslate"><span class="pre">cmd</span></code>)</p>
+<p>Crie um ambiente virtual, fazendo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">xxxxx</span>\<span class="n">venvs</span>
+<span class="n">py</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">xxxxx</span>\<span class="n">venvs</span>\<span class="n">CGr</span>
+</pre></div>
+</div>
+<p>Ative o ambiente virtual</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">xxxxx</span>\<span class="n">venvs</span>\<span class="n">CGr</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+</pre></div>
+</div>
+<p>Obtenha o <a class="reference external" href="https://github.com/margaridamadeira/CGr-P">repositório</a> com o código partilhado, descarregando o zip ou clonando o repositório.</p>
+<p>Instale os requisitos listados no ficheiro <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> que está na pasta E1 fazendo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">E1</span>\<span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Se tudo correu bem, ótimo. Se algo não correu bem, peça ajuda ao docente em sala.</p>
+</div>
+<div class="section" id="verificacao-da-instalacao">
+<h2>Verificação da instalação<a class="headerlink" href="#verificacao-da-instalacao" title="Link permanente para este título">¶</a></h2>
+<p>Mude para a pasta `src1 fazendo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">src1</span>
+</pre></div>
+</div>
+<p>e experimente correr o script <code class="docutils literal notranslate"><span class="pre">testInstall.py</span></code> fazendo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="n">testInstall</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Se tudo correu bem, surgiu a janela <a class="reference internal" href="#janelavazia"><span class="std std-ref">A janela da etapa Aplicação.</span></a>.</p>
+<div class="figure align-default" id="janelavazia">
+<a class="reference internal image-reference" href="docs/images/black-window.png"><img alt="docs/images/black-window.png" src="docs/images/black-window.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">A janela da etapa Aplicação.</span><a class="headerlink" href="#janelavazia" title="Permalink to this image">¶</a></p>
+</div>
+<p>Só falta agora analisar o código em <code class="docutils literal notranslate"><span class="pre">src1</span></code> e identificar cada uma das partes.</p>
+<p>Bom trabalho!</p>
 </div>
 </div>
 

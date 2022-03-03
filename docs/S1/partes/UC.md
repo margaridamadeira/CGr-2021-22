@@ -21,7 +21,3 @@ Trabalhamos ao abrigo do {ref}`codHonra`.
 É permitido: discussão dos materiais das aulas, enunciados dos trabalhos, conceitos informáticos associados à linguagem de programação, OpenGL e GLSL.
 
 _Não_ é permitido: partilha de detalhes de implementação, código, algoritmos, pseudo-código ou algo relacionado com o desenvolvimento de (re)soluções.
-
-## Planeamento
-
-Pode consultar o {ref}`plano` das aulas, teóricas e práticas laboratoriais, bem como as datas de entrega dos elementos de avaliação da edição de 2020-21 de Computação Gráfica.

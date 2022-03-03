@@ -18,6 +18,10 @@ O plano de aulas, teóricas e práticas laboratoriais da edição de 2021-22 de 
 
 | Sem | Data | Aula | Tema    | Materiais | Concluir até |
 | :---: | :---: | :---: | -------------- | --------- |         ---: | 
-|  S1   |  22 fev | T1  | Apresentação da UC <br> Introdução a computação gráfica |  [Apresentação]() e [Introdução]() |  |
+|  S1   |  22 fev | T1  | {ref}`UC` |  |  |
+|  S1   |  24 fev | T2  | {ref}`T1` |  |  |
 |  S1   |  24 fev | T2  | A pipeline gráfica | [Representação]() |  |
+|  S2   |   1 mar |     | Carnaval           |                   |  |
+|  S2   |   3 mar | T3  | Concl. pipeline gráfica <br> *Shaders* | [Etapa Geometria]() |  |
+|   S3  |   8 mar | T4  |   | |  |
 

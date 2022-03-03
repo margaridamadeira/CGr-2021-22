@@ -9,7 +9,8 @@ parts:
   - file: docs/S1/Introd
     sections:
     - file: docs/S1/partes/UC
-    - file: docs/S1/partes/CGr_part1
+    - file: docs/S1/partes/plano
+  - file: docs/S1/partes/CGr_part1
 - caption: S2
   chapters:
   - file: docs/S2/Preparar
