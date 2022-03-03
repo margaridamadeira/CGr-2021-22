@@ -1,0 +1,13 @@
+# https://sketchviz.com/new
+
+graph G {
+  
+  node [fontname = "Handlee", fontcolor="blue", color="blue"];
+  edge [fontname = "Handlee", fontcolor="blue", color="blue"];
+
+  
+  Modelação [shape=ellipse];
+  Representação [shape=ellipse];
+  Visualização [shape=ellipse];
+}
+

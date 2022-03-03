@@ -1,0 +1,37 @@
+# http://www.graphviz.org/
+
+digraph G {
+  compound=true;
+  graph [fontname = "Handlee", fontcolor="blue", color="blue"];
+  node [fontname = "Handlee", fontcolor="blue", color="blue"];
+  edge [fontname = "Handlee", fontcolor="blue", color="blue"];
+
+  bgcolor=transparent;
+  
+  
+  subgraph cluster_0 {
+      
+      color = none;
+      subgraph cluster_1 {
+          color=none;
+          
+          "Cena 3D" [shape=ellipse];
+          Imagem [shape=ellipse];
+          "Cena 3D" -> Imagem [rank = same, color=none];
+        }
+
+        subgraph cluster_2 {
+            rankdir = LR;
+            Aplicação -> Geometria ->  Rasterização;
+            label = "*Processo*";
+            fontsize = 20;
+            color=blue
+        }
+  }
+  
+  "Cena 3D" -> Aplicação [lhead=cluster_2];
+
+  Rasterização -> Imagem [ltail = cluster_2];
+
+}
+
