@@ -1,7 +1,7 @@
 (UC)=
 # Avaliação na UC CGr 2021-22
 
-A ficha da unidade curricular está na [Tutoria](https://academico.ualg.pt/netpa/doc?codeDiscip=14781057&anoLectivo=202122&codInstituic=9&stage=FichaUnidadeCurricular&_event=publicacaoFUC&docIsAttachment=false&popup_mode=true)
+A ficha da unidade curricular está na [Tutoria](https://academico.ualg.pt/netpa/doc?codeDiscip=14781057&anoLectivo=202122&codInstituic=9&stage=FichaUnidadeCurricular&_event=publicacaoFUC&docIsAttachment=false&popup_mode=true),
 
 Aqui detalham-se alguns aspetos particulares relativos à avaliação.
 
@@ -21,3 +21,4 @@ Trabalhamos ao abrigo do {ref}`codHonra`.
 É permitido: discussão dos materiais das aulas, enunciados dos trabalhos, conceitos informáticos associados à linguagem de programação, OpenGL e GLSL.
 
 _Não_ é permitido: partilha de detalhes de implementação, código, algoritmos, pseudo-código ou algo relacionado com o desenvolvimento de (re)soluções.
+
