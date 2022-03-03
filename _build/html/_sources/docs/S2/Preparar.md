@@ -63,9 +63,9 @@ py testInstall.py
 
 Se tudo correu bem, surgiu a janela {ref}`janelaVazia`.
 
-```{figure} ../images/black-window.png
+```{figure} ../../images/black-window.png
 ---
-height: 150px
+width: 500px
 name: janelaVazia
 ---
 A janela da etapa Aplicação.
