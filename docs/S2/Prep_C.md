@@ -1,17 +1,20 @@
-# P1
 (prepC)=
-## Preparação do ambiente de trabalho usando C
+# Preparação do ambiente de trabalho usando C
 
-
-Exemplos de código obtidos em [LearnOpenGL](https://learnopengl.com/)
+Exemplos de código obtidos em [LearnOpenGL](https://learnopengl.com/Getting-started/Creating-a-window)
 
 ## Pré-requisitos
 
-drivers, 
-gcc,
-glfw3, 
-cmake
+Antes de iniciar, verifique que tem os *drivers* da carta gráfica atualizados.
 
+Este guia pressupõe a instalação prévia do compilador de C/C++ da GNU, da biblioteca [glfw3](http://www.glfw.org/download.html), e do sistema de apoio à compilação [cmake](https://cmake.org/download/).
+
+## Instruções
+### Ano letivo 2020-21
+
+Pode seguir as [instruções](./P1-old.tgz) preparadas pelo Professor Sérgio Jesus no ano letivo 2020-21.
+
+### Passo a passo em Linux
 
 Passo 0. Criar uma pasta para as práticas na nossa pasta de *CGr-2021-22*.
 

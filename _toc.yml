@@ -12,5 +12,4 @@ parts:
     - file: docs/S1/partes/CGr_part1
 - caption: S2
   chapters:
-  - file: docs/S2/Prep_ambiente
-
+  - file: docs/S2/Preparar

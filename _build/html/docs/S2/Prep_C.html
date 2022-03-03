@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>P1 &#8212; Computação Gráfica 2021-2022</title>
+    <title>Preparação do ambiente de trabalho usando C &#8212; Computação Gráfica 2021-2022</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,10 +52,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/CGr-2021-22/docs/S2/Prep_ambiente.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/CGr-2021-22/docs/S2/Prep_C.html" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Pesquisar" href="../../search.html" />
-    <link rel="prev" title="Introdução" href="../S1/partes/CGr_part1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -138,10 +137,10 @@ const thebe_selector_output = ".output, .cell_output"
   S2
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   P1
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Preparar.html">
+   Preparar o ambiente de trabalho
   </a>
  </li>
 </ul>
@@ -185,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/S2/Prep_ambiente.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/S2/Prep_C.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -216,14 +215,26 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preparacao-do-ambiente-de-trabalho-usando-c">
-   Preparação do ambiente de trabalho usando C
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pre-requisitos">
    Pré-requisitos
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrucoes">
+   Instruções
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ano-letivo-2020-21">
+     Ano letivo 2020-21
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#passo-a-passo-em-linux">
+     Passo a passo em Linux
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -235,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>P1</h1>
+                <h1>Preparação do ambiente de trabalho usando C</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -246,14 +257,26 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preparacao-do-ambiente-de-trabalho-usando-c">
-   Preparação do ambiente de trabalho usando C
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pre-requisitos">
    Pré-requisitos
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrucoes">
+   Instruções
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ano-letivo-2020-21">
+     Ano letivo 2020-21
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#passo-a-passo-em-linux">
+     Passo a passo em Linux
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -264,18 +287,22 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="p1">
-<h1>P1<a class="headerlink" href="#p1" title="Link permanente para este título">¶</a></h1>
-<div class="section" id="preparacao-do-ambiente-de-trabalho-usando-c">
-<span id="prepc"></span><h2>Preparação do ambiente de trabalho usando C<a class="headerlink" href="#preparacao-do-ambiente-de-trabalho-usando-c" title="Link permanente para este título">¶</a></h2>
-<p>Exemplos de código obtidos em <a class="reference external" href="https://learnopengl.com/">LearnOpenGL</a></p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="preparacao-do-ambiente-de-trabalho-usando-c">
+<span id="prepc"></span><h1>Preparação do ambiente de trabalho usando C<a class="headerlink" href="#preparacao-do-ambiente-de-trabalho-usando-c" title="Link permanente para este título">¶</a></h1>
+<p>Exemplos de código obtidos em <a class="reference external" href="https://learnopengl.com/Getting-started/Creating-a-window">LearnOpenGL</a></p>
 <div class="section" id="pre-requisitos">
 <h2>Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Link permanente para este título">¶</a></h2>
-<p>drivers,
-gcc,
-glfw3,
-cmake</p>
+<p>Antes de iniciar, verifique que tem os <em>drivers</em> da carta gráfica atualizados.</p>
+<p>Este guia pressupõe a instalação prévia do compilador de C/C++ da GNU, da biblioteca <a class="reference external" href="http://www.glfw.org/download.html">glfw3</a>, e do sistema de apoio à compilação <a class="reference external" href="https://cmake.org/download/">cmake</a>.</p>
+</div>
+<div class="section" id="instrucoes">
+<h2>Instruções<a class="headerlink" href="#instrucoes" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="ano-letivo-2020-21">
+<h3>Ano letivo 2020-21<a class="headerlink" href="#ano-letivo-2020-21" title="Link permanente para este título">¶</a></h3>
+<p>Pode seguir as <span class="xref myst">instruções</span> preparadas pelo Professor Sérgio Jesus no ano letivo 2020-21.</p>
+</div>
+<div class="section" id="passo-a-passo-em-linux">
+<h3>Passo a passo em Linux<a class="headerlink" href="#passo-a-passo-em-linux" title="Link permanente para este título">¶</a></h3>
 <p>Passo 0. Criar uma pasta para as práticas na nossa pasta de <em>CGr-2021-22</em>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~$ <span class="nb">cd</span> CGr-2021-22<span class="p">;</span> mkdir P<span class="p">;</span> <span class="nb">cd</span> P
 </pre></div>
@@ -473,7 +500,7 @@ cmake</p>
 <p>e consegue-se uma janela preta</p>
 <div class="figure align-default" id="black-window">
 <a class="reference internal image-reference" href="../../_images/black-window.png"><img alt="../../_images/black-window.png" src="../../_images/black-window.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Primeiro exemplo</span><a class="headerlink" href="#black-window" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Primeiro exemplo</span><a class="headerlink" href="#black-window" title="Permalink to this image">¶</a></p>
 </div>
 <p>Passo 6. Novo exemplo, que ilustra o que faremos para cada novo programa.</p>
 <p>Passo 6.1 No <em>CMakeLists.txt</em> principal, adicionamos outra pasta com</p>
@@ -590,7 +617,8 @@ cmake</p>
 <p>o que faz surgir uma janela cinzenta.</p>
 <div class="figure align-default" id="grey-window">
 <a class="reference internal image-reference" href="../../_images/grey-window.png"><img alt="../../_images/grey-window.png" src="../../_images/grey-window.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Segundo exemplo</span><a class="headerlink" href="#grey-window" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Segundo exemplo</span><a class="headerlink" href="#grey-window" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 </div>
@@ -619,14 +647,7 @@ cmake</p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../S1/partes/CGr_part1.html" title="anterior page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Introdução</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
