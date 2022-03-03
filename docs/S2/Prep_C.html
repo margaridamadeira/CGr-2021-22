@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preparação do ambiente de trabalho usando C &#8212; Computação Gráfica 2021-2022</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/CGr-2021-22/docs/S2/Prep_C.html" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computação Gráfica 2021-2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Início
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/Apresenta%C3%A7%C3%A3o.html">
+   Apresentação geral
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  S1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../S1/Introd.html">
+   Apresentação da UC
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../S1/partes/UC.html">
+     Avaliação na UC CGr 2021-22
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../S1/partes/CGr_part1.html">
+   Introdução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  S2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Preparar.html">
+   Preparar o ambiente de trabalho
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/S2/Prep_C.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-requisitos">
+   Pré-requisitos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrucoes">
+   Instruções
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ano-letivo-2020-21">
+     Ano letivo 2020-21
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#passo-a-passo-em-linux">
+     Passo a passo em Linux
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Preparação do ambiente de trabalho usando C</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-requisitos">
+   Pré-requisitos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrucoes">
+   Instruções
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ano-letivo-2020-21">
+     Ano letivo 2020-21
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#passo-a-passo-em-linux">
+     Passo a passo em Linux
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="preparacao-do-ambiente-de-trabalho-usando-c">
+<span id="prepc"></span><h1>Preparação do ambiente de trabalho usando C<a class="headerlink" href="#preparacao-do-ambiente-de-trabalho-usando-c" title="Link permanente para este título">¶</a></h1>
+<p>Exemplos de código obtidos em <a class="reference external" href="https://learnopengl.com/Getting-started/Creating-a-window">LearnOpenGL</a></p>
+<div class="section" id="pre-requisitos">
+<h2>Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Link permanente para este título">¶</a></h2>
+<p>Antes de iniciar, verifique que tem os <em>drivers</em> da carta gráfica atualizados.</p>
+<p>Este guia pressupõe a instalação prévia do compilador de C/C++ da GNU, da biblioteca <a class="reference external" href="http://www.glfw.org/download.html">glfw3</a>, e do sistema de apoio à compilação <a class="reference external" href="https://cmake.org/download/">cmake</a>.</p>
+</div>
+<div class="section" id="instrucoes">
+<h2>Instruções<a class="headerlink" href="#instrucoes" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="ano-letivo-2020-21">
+<h3>Ano letivo 2020-21<a class="headerlink" href="#ano-letivo-2020-21" title="Link permanente para este título">¶</a></h3>
+<p>Pode seguir as <span class="xref myst">instruções</span> preparadas pelo Professor Sérgio Jesus no ano letivo 2020-21.</p>
+</div>
+<div class="section" id="passo-a-passo-em-linux">
+<h3>Passo a passo em Linux<a class="headerlink" href="#passo-a-passo-em-linux" title="Link permanente para este título">¶</a></h3>
+<p>Passo 0. Criar uma pasta para as práticas na nossa pasta de <em>CGr-2021-22</em>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~$ <span class="nb">cd</span> CGr-2021-22<span class="p">;</span> mkdir P<span class="p">;</span> <span class="nb">cd</span> P
+</pre></div>
+</div>
+<p>Passo 1. Vamos precisar de uma diretoria para a biblioteca <em>glad</em> e outras para cada um dos trabalhos.</p>
+<p>Passo 1.1. Criemos então duas pastas, <em>glad</em> e <em>exemplo1</em>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P$ mkdir glad<span class="p">;</span> mkdir exemplo1
+</pre></div>
+</div>
+<p>Passo 1.2. Na pasta global, vamos criar um <em>CMakeLists.txt</em> que fará a ligação a cada um dos trabalhos.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P$ touch CMakeLists.txt
+</pre></div>
+</div>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># CMakeLists files in this project can</span>
+<span class="c"># refer to the root source directory of the project as ${CGr_SOURCE_DIR} and</span>
+<span class="c"># to the root binary directory of the project as ${CGr_BINARY_DIR}.</span>
+<span class="nb">cmake_minimum_required</span> <span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.15</span><span class="p">)</span>
+<span class="nb">project</span> <span class="p">(</span><span class="s">CGr</span><span class="p">)</span>
+
+<span class="c"># OpenGL Flags</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">OpenGL_GL_PREFERENCE</span><span class="w"> </span><span class="s">GLVND</span><span class="p">)</span>
+
+<span class="c"># GLFW - Installed via: sudo apt install libglfw3 libglfw3-dev</span>
+<span class="nb">option</span><span class="p">(</span><span class="s">GLFW_BUILD_DOCS</span><span class="w"> </span><span class="s">OFF</span><span class="p">)</span>
+<span class="nb">option</span><span class="p">(</span><span class="s">GLFW_BUILD_EXAMPLES</span><span class="w"> </span><span class="s">OFF</span><span class="p">)</span>
+<span class="nb">option</span><span class="p">(</span><span class="s">GLFW_BUILD_TESTS</span><span class="w"> </span><span class="s">OFF</span><span class="p">)</span>
+<span class="nb">option</span><span class="p">(</span><span class="s">GLFW_INSTALL</span><span class="w"> </span><span class="s">OFF</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">glfw3</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+
+<span class="c"># Recurse into the &quot;Hello&quot; and &quot;Demo&quot; subdirectories. This does not actually</span>
+<span class="c"># cause another cmake executable to run. The same process will walk through</span>
+<span class="c"># the project&#39;s entire directory structure.</span>
+<span class="nb">add_subdirectory</span> <span class="p">(</span><span class="s">glad</span><span class="p">)</span>
+<span class="nb">add_subdirectory</span> <span class="p">(</span><span class="s">exemplo1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Passo 2. Obter e preparar o <em>glad</em>.</p>
+<p>Passo 2.1. Desloquemo-nos para a pasta <em>glad</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P$ <span class="nb">cd</span> glad
+</pre></div>
+</div>
+<p>e aí descarreguemos o zip para a nossa <a class="reference external" href="http://glad.dav1d.de/#profile=core&amp;specification=gl&amp;api=gl%3D3.3&amp;api=gles1%3Dnone&amp;api=gles2%3Dnone&amp;api=glsc2%3Dnone&amp;language=c&amp;loader=on">configuração</a> escolhendo <em>Generate</em> guardando o zip produzido.</p>
+<p>Passo 2.2. Abrir o zip com</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/glad$ unzip glad-core.zip 
+</pre></div>
+</div>
+<p>Passo 2.3. Podemos eliminar o zip, já não precisaremos dele.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/glad$ rm glad-core.zip 
+</pre></div>
+</div>
+<p>Passo 2.4 Criemos o CMakeLists.txt com as instruções para criar esta biblioteca.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/glad$ touch CMakeLists.txt
+</pre></div>
+</div>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Create a library called &quot;glad&quot; which includes the source file &quot;glad.c&quot;.</span>
+<span class="c"># The extension is already found. Any number of sources could be listed here.</span>
+<span class="nb">add_library</span> <span class="p">(</span><span class="s">glad</span><span class="w"> </span><span class="s">src/glad.c</span><span class="p">)</span>
+
+<span class="c"># Make sure the compiler can find include files for our glad library</span>
+<span class="c"># when other libraries or executables link to glad</span>
+<span class="nb">target_include_directories</span> <span class="p">(</span><span class="s">glad</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">include</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>O <em>glad</em> está preparado e, de futuro, não precisaremos repetir estes passos.</p>
+<p>Passo 3. Vamos criar agora o primeiro exemplo.</p>
+<p>Passo 3.1 Desloquemo-nos para a pasta <em>exemplo1</em> e coloquemos aí o código fonte, <em>main.cpp</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/glad$ <span class="nb">cd</span> ../exemplo1
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/exemplo1$ touch main.cpp
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glad/glad.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;GLFW/glfw3.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">framebuffer_size_callback</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">processInput</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="w"> </span><span class="o">*</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// settings</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SCR_WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SCR_HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// glfw: initialize and configure</span>
+<span class="w">    </span><span class="c1">// ------------------------------</span>
+<span class="w">    </span><span class="n">glfwInit</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_CONTEXT_VERSION_MAJOR</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_CONTEXT_VERSION_MINOR</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_OPENGL_PROFILE</span><span class="p">,</span><span class="w"> </span><span class="n">GLFW_OPENGL_CORE_PROFILE</span><span class="p">);</span><span class="w"></span>
+
+<span class="cp">#ifdef __APPLE__</span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_OPENGL_FORWARD_COMPAT</span><span class="p">,</span><span class="w"> </span><span class="n">GL_TRUE</span><span class="p">);</span><span class="w"></span>
+<span class="cp">#endif</span>
+
+<span class="w">    </span><span class="c1">// glfw window creation</span>
+<span class="w">    </span><span class="c1">// --------------------</span>
+<span class="w">    </span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glfwCreateWindow</span><span class="p">(</span><span class="n">SCR_WIDTH</span><span class="p">,</span><span class="w"> </span><span class="n">SCR_HEIGHT</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LearnOpenGL&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">window</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to create GLFW window&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">glfwTerminate</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwMakeContextCurrent</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwSetFramebufferSizeCallback</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="n">framebuffer_size_callback</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// glad: load all OpenGL function pointers</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">gladLoadGLLoader</span><span class="p">((</span><span class="n">GLADloadproc</span><span class="p">)</span><span class="n">glfwGetProcAddress</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to initialize GLAD&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+
+<span class="w">    </span><span class="c1">// render loop</span>
+<span class="w">    </span><span class="c1">// -----------</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">glfwWindowShouldClose</span><span class="p">(</span><span class="n">window</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// input</span>
+<span class="w">        </span><span class="c1">// -----</span>
+<span class="w">        </span><span class="n">processInput</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)</span>
+<span class="w">        </span><span class="c1">// -------------------------------------------------------------------------------</span>
+<span class="w">        </span><span class="n">glfwSwapBuffers</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">glfwPollEvents</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// glfw: terminate, clearing all previously allocated GLFW resources.</span>
+<span class="w">    </span><span class="c1">// ------------------------------------------------------------------</span>
+<span class="w">    </span><span class="n">glfwTerminate</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly</span>
+<span class="c1">// ---------------------------------------------------------------------------------------------------------</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">processInput</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="w"> </span><span class="o">*</span><span class="n">window</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">glfwGetKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="n">GLFW_KEY_ESCAPE</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">GLFW_PRESS</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">glfwSetWindowShouldClose</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// glfw: whenever the window size changed (by OS or user resize) this callback function executes</span>
+<span class="c1">// ---------------------------------------------------------------------------------------------</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">framebuffer_size_callback</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// make sure the viewport matches the new window dimensions; note that width and </span>
+<span class="w">    </span><span class="c1">// height will be significantly larger than specified on retina displays.</span>
+<span class="w">    </span><span class="n">glViewport</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Passo 3.2 Criemos o <em>CMakeLists.txt</em> com as instruções para criar o executável</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/exemplo1$ touch CMakeLists.txt
+</pre></div>
+</div>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Add executable called &quot;exemplo1&quot; that is built from the source files</span>
+<span class="c"># &quot;main.cxx&quot;. The extensions are automatically found.</span>
+<span class="nb">add_executable</span> <span class="p">(</span><span class="s">exemplo1</span><span class="w"> </span><span class="s">main.cpp</span><span class="p">)</span>
+
+<span class="c"># Link the executable to the glad library. Since the glad library has</span>
+<span class="c"># public include directories we will use those link directories when building</span>
+<span class="c"># exemplo1</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">exemplo1</span>
+<span class="w">  </span><span class="s">LINK_PUBLIC</span>
+<span class="w">    </span><span class="s">glfw</span>
+<span class="w">    </span><span class="s">glad</span>
+<span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_DL_LIBS</span><span class="o">}</span><span class="w"> </span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Passo 4. Vamos então compilar o código deste exemplo. Voltemos para raiz das pastas das práticas</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/exemplo1$ touch <span class="nb">cd</span> ..
+</pre></div>
+</div>
+<p>Passo 4.1. E criemos uma pasta <em>build</em> para os ficheiros resultantes e desloquemo-nos para aí.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P$ mkdir build<span class="p">;</span> <span class="nb">cd</span> build
+</pre></div>
+</div>
+<p>Passo 4.2. Usando o <em>cmake</em> produzimos <em>Makefile</em>, indicando onde está a raiz do <em>CMakeLists.txt</em> e onde queremos os executáveis. Neste exemplo</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/build$ cmake -S .. -B.
+</pre></div>
+</div>
+<p>Passo 4.3. E determinamos a compilação</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/build$ make
+</pre></div>
+</div>
+<p>Passo 5. Executamos o programa</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/build$ ./exemplo1/exemplo1 
+</pre></div>
+</div>
+<p>e consegue-se uma janela preta</p>
+<div class="figure align-default" id="black-window">
+<a class="reference internal image-reference" href="../../_images/black-window.png"><img alt="../../_images/black-window.png" src="../../_images/black-window.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text">Primeiro exemplo</span><a class="headerlink" href="#black-window" title="Permalink to this image">¶</a></p>
+</div>
+<p>Passo 6. Novo exemplo, que ilustra o que faremos para cada novo programa.</p>
+<p>Passo 6.1 No <em>CMakeLists.txt</em> principal, adicionamos outra pasta com</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">add_subdirectory</span> <span class="p">(</span><span class="s">exemplo2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Passo 6.1 Duplicamos a pasta <em>exemplo1</em> para outra, ao mesmo nível, designada <em>exemplo2</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P$ cp -r exemplo1 exemplo2
+</pre></div>
+</div>
+<p>Passo 6.2 Substituimos o <em>main.cpp</em> pelo novo código, neste caso <em>main1.2.cpp</em></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glad/glad.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;GLFW/glfw3.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">framebuffer_size_callback</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">processInput</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="w"> </span><span class="o">*</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// settings</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SCR_WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SCR_HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// glfw: initialize and configure</span>
+<span class="w">    </span><span class="c1">// ------------------------------</span>
+<span class="w">    </span><span class="n">glfwInit</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_CONTEXT_VERSION_MAJOR</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_CONTEXT_VERSION_MINOR</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_OPENGL_PROFILE</span><span class="p">,</span><span class="w"> </span><span class="n">GLFW_OPENGL_CORE_PROFILE</span><span class="p">);</span><span class="w"></span>
+
+<span class="cp">#ifdef __APPLE__</span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_OPENGL_FORWARD_COMPAT</span><span class="p">,</span><span class="w"> </span><span class="n">GL_TRUE</span><span class="p">);</span><span class="w"></span>
+<span class="cp">#endif</span>
+
+<span class="w">    </span><span class="c1">// glfw window creation</span>
+<span class="w">    </span><span class="c1">// --------------------</span>
+<span class="w">    </span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glfwCreateWindow</span><span class="p">(</span><span class="n">SCR_WIDTH</span><span class="p">,</span><span class="w"> </span><span class="n">SCR_HEIGHT</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LearnOpenGL&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">window</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to create GLFW window&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">glfwTerminate</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwMakeContextCurrent</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwSetFramebufferSizeCallback</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="n">framebuffer_size_callback</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// glad: load all OpenGL function pointers</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">gladLoadGLLoader</span><span class="p">((</span><span class="n">GLADloadproc</span><span class="p">)</span><span class="n">glfwGetProcAddress</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to initialize GLAD&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+
+<span class="w">    </span><span class="c1">// render loop</span>
+<span class="w">    </span><span class="c1">// -----------</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">glfwWindowShouldClose</span><span class="p">(</span><span class="n">window</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// input</span>
+<span class="w">        </span><span class="c1">// -----</span>
+<span class="w">        </span><span class="n">processInput</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// render</span>
+<span class="w">        </span><span class="c1">// ------</span>
+<span class="w">        </span><span class="n">glClearColor</span><span class="p">(</span><span class="mf">0.5f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5f</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">glClear</span><span class="p">(</span><span class="n">GL_COLOR_BUFFER_BIT</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)</span>
+<span class="w">        </span><span class="c1">// -------------------------------------------------------------------------------</span>
+<span class="w">        </span><span class="n">glfwSwapBuffers</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">glfwPollEvents</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// glfw: terminate, clearing all previously allocated GLFW resources.</span>
+<span class="w">    </span><span class="c1">// ------------------------------------------------------------------</span>
+<span class="w">    </span><span class="n">glfwTerminate</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly</span>
+<span class="c1">// ---------------------------------------------------------------------------------------------------------</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">processInput</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="w"> </span><span class="o">*</span><span class="n">window</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">glfwGetKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="n">GLFW_KEY_ESCAPE</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">GLFW_PRESS</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">glfwSetWindowShouldClose</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// glfw: whenever the window size changed (by OS or user resize) this callback function executes</span>
+<span class="c1">// ---------------------------------------------------------------------------------------------</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">framebuffer_size_callback</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// make sure the viewport matches the new window dimensions; note that width and </span>
+<span class="w">    </span><span class="c1">// height will be significantly larger than specified on retina displays.</span>
+<span class="w">    </span><span class="n">glViewport</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Passo 6.3. Corrigimos o nome do executável e do código fonte no ficheiro <em>CMakeLists.txt</em> da pasta <em>exemplo2</em></p>
+<p>Passo 7. Para compilar e executar</p>
+<p>Passo 7.1 Voltamos para a pasta dos resultados, e chamamos o <em>cmake</em> e o <em>make</em>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/build$ cmake -S .. -B. <span class="p">;</span> make
+</pre></div>
+</div>
+<p>Se algo não correu bem, após corrigirmos o código fonte, bastará o <em>make</em>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/build$ make
+</pre></div>
+</div>
+<p>Passo 7.2. Executamos o programa</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@machine:~/CGr-2021-22/P/build$ ./exemplo2/exemplo2 
+</pre></div>
+</div>
+<p>o que faz surgir uma janela cinzenta.</p>
+<div class="figure align-default" id="grey-window">
+<a class="reference internal image-reference" href="images/grey-window.png"><img alt="images/grey-window.png" src="images/grey-window.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text">Segundo exemplo</span><a class="headerlink" href="#grey-window" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/S2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Margarida Madeira e Moura<br/>
+    
+        &copy; direito autoral 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
