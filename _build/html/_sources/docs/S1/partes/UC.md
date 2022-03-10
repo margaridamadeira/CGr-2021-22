@@ -1,4 +1,3 @@
-(UC)=
 # Avaliação na UC CGr 2021-22
 
 A ficha da unidade curricular está na [Tutoria](https://academico.ualg.pt/netpa/doc?codeDiscip=14781057&anoLectivo=202122&codInstituic=9&stage=FichaUnidadeCurricular&_event=publicacaoFUC&docIsAttachment=false&popup_mode=true),
